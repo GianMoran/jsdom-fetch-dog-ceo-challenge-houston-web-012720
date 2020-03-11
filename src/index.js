@@ -1,4 +1,5 @@
 console.log('%c HI', 'color: firebrick')
+console.log('%c HI', 'color: firebrick')
 document.addEventListener('DOMContentLoaded', ()=>{
     const imgUrl = "https://dog.ceo/api/breeds/image/random/4"
     fetch(imgUrl)
@@ -46,12 +47,12 @@ function removeByCriteria(json, criteria){
 
 function addBreeds(json){
    
-    let div = document.querySelector('ul#dog-breeds')
+    let ul = document.querySelector('ul#dog-breeds')
     for(const breed in json.message){    
         let li = document.createElement('li');
         li.innerText = breed;
         li.id = "breed"
-        div.append(li);
+        ul.append(li);
     }
 }
 function replaceImages(json){
